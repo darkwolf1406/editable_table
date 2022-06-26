@@ -1,0 +1,39 @@
+.mainTbl {
+    border-spacing: 0;
+    counter-reset: serial-number;
+}
+
+.mainTbl th {
+    font-weight: lighter;
+    font-size: small;
+}
+
+.mainTbl td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.mainTbl td:first-child:before {
+    counter-increment: serial-number;
+    content: counter(serial-number); 
+}
+
+.mainTbl>tr>:nth-child(1) {
+    border: none;
+    min-width: 12px;
+    font-weight: lighter;
+    font-size: small;
+}
+
+.controlsBox {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    border: none;
+}
+
+
